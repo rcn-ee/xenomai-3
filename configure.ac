@@ -139,6 +139,10 @@ case "$build_for" in
 	XENO_TARGET_ARCH=arm
 	CONFIG_XENO_DEFAULT_PERIOD=1000000
 	;;
+ aarch64-*)
+	XENO_TARGET_ARCH=arm64
+	CONFIG_XENO_DEFAULT_PERIOD=1000000
+	;;
  x86_64-*|amd64-*)
 	use_tls=yes
 	XENO_TARGET_ARCH=x86
@@ -849,6 +853,10 @@ AC_CONFIG_FILES([ \
 	lib/cobalt/arch/arm/include/Makefile \
 	lib/cobalt/arch/arm/include/asm/Makefile \
 	lib/cobalt/arch/arm/include/asm/xenomai/Makefile \
+	lib/cobalt/arch/arm64/Makefile \
+	lib/cobalt/arch/arm64/include/Makefile \
+	lib/cobalt/arch/arm64/include/asm/Makefile \
+	lib/cobalt/arch/arm64/include/asm/xenomai/Makefile \
 	lib/cobalt/arch/powerpc/Makefile \
 	lib/cobalt/arch/powerpc/include/Makefile \
 	lib/cobalt/arch/powerpc/include/asm/Makefile \
