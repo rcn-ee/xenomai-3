@@ -10,6 +10,7 @@ wrappers = $(XENO_POSIX_WRAPPERS)
 SUBDIRS = 		\
 	arith 		\
 	bufp		\
+	fpu-stress	\
 	iddp		\
 	leaks		\
 	posix-clock	\

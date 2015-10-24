@@ -899,6 +899,7 @@ AC_CONFIG_FILES([ \
 	testsuite/smokey/timerfd/Makefile \
 	testsuite/smokey/tsc/Makefile \
 	testsuite/smokey/leaks/Makefile \
+	testsuite/smokey/fpu-stress/Makefile \
 	testsuite/clocktest/Makefile \
 	testsuite/xeno-test/Makefile \
 	utils/Makefile \
