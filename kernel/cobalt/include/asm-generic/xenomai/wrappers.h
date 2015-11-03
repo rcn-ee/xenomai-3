@@ -62,10 +62,17 @@
 
 #if LINUX_VERSION_CODE < KERNEL_VERSION(3,17,0)
 #include <linux/netdevice.h>
+#include <linux/trace_seq.h>
 
 #undef alloc_netdev
 #define alloc_netdev(sizeof_priv, name, name_assign_type, setup) \
 	alloc_netdev_mqs(sizeof_priv, name, setup, 1, 1)
+
+static inline unsigned char *
+trace_seq_buffer_ptr(struct trace_seq *s)
+{
+	return s->buffer + s->len;
+}
 #endif
 
 #if LINUX_VERSION_CODE < KERNEL_VERSION(3,19,0)
